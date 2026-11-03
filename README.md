@@ -17,6 +17,7 @@ I studied computer applications (BCA, MCA) and completed the Future-Ready Produc
 Kannada (mother tongue), English, Hindi, Telugu
 
 ## Contact
+- Résumé: [Manoj-Kumar-PM-Resume.pdf](Manoj-Kumar-PM-Resume.pdf)
 - LinkedIn: https://www.linkedin.com/in/manoj-kumar-p-m-7a028a444
 - GitHub: https://github.com/manojkumarpm651-hub
 
