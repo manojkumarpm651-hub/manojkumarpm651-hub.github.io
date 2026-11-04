@@ -234,6 +234,17 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding
   @keyframes blink{50%{opacity:0}}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.build{transition:none}}
+
+.build.wide{grid-column:1/-1}
+.wide-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px}
+.wide-col{display:grid;gap:16px;align-content:start;min-width:0}
+.wide-col > p:not(.q){margin:0;color:var(--muted);font-size:.96rem}
+.mini-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.mini-stats div{padding:12px;border-radius:10px;background:var(--bg-2);border:1px solid var(--line)}
+.mini-stats b{display:block;font-family:var(--f-display);font-size:1.3rem;font-weight:700;color:var(--cyan);font-variant-numeric:tabular-nums}
+.mini-stats span{font-family:var(--f-mono);font-size:.7rem;color:var(--muted)}
+@media (max-width:960px){.wide-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:420px){.mini-stats{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
@@ -276,7 +287,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding
           <dt>Education</dt><dd>MCA · BCA</dd>
           <dt>Training</dt><dd>PM with Applied AI, IIT Roorkee</dd>
           <dt>Capstone</dt><dd>9.4 / 10</dd>
-          <dt>Stack</dt><dd>Gemini · Supabase · Lovable</dd>
+          <dt>Stack</dt><dd>Gemini · Supabase · Lovable · Go</dd>
           <dt>Languages</dt><dd>ಕನ್ನಡ · English · हिन्दी · తెలుగు</dd>
           <dt>Off-duty</dt><dd>PC builds · badminton · books</dd>
         </dl>
@@ -287,7 +298,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding
   </div>
 
   <div class="stats" aria-label="At a glance">
-    <div><b>2</b><span>AI product builds</span></div>
+    <div><b>3</b><span>product builds shipped</span></div>
     <div><b>2</b><span>strategy memos published</span></div>
     <div><b>10/10</b><span>Northstar test scenarios passed</span></div>
     <div><b>9.4</b><span>capstone score out of 10</span></div>
@@ -305,7 +316,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding
         <p>I've always been more curious about why a product exists than about how its code is written. Product management drew me in because it sits where that curiosity is useful: understanding how people actually use a product, what it does for them, and how to shape it with the clients who depend on it.</p>
         <p>I studied computer applications, with a BCA and an MCA. I'm not a full-time coder, but I'm solid on the fundamentals. I can read how a system fits together, talk through trade-offs with engineers, and tell whether an idea is feasible before a team commits to it. Where I'm strongest is understanding the product itself: who it's for, the problem it solves, and how to manage it over time.</p>
         <p>I completed the Future-Ready Product Management with Applied AI programme from Masai School and IIT Roorkee, where my capstone scored 9.4 out of 10. Since then I've been building a portfolio that shows how I think: one open decision per case, primary sources behind every number, and a working prototype where the decision depends on AI.</p>
-        <div class="now"><span>Now</span><p>Writing a hard-tradeoff memo on Tesla's Supercharger network, and building an AI tool that scans websites for phishing threats.</p></div>
+        <div class="now"><span>Now</span><p>Shipping StarkScan, a confined local security scanner. Next up: a hard-tradeoff memo on Tesla's Superchargers, and an AI tool that scans websites for phishing threats.</p></div>
       </div>
       <div class="panel">
         <p class="label">Details</p>
@@ -363,7 +374,7 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding
       <div class="stack-side">
         <div class="panel">
           <p class="label">Tools I build with</p>
-          <div class="tags"><span>Gemini</span><span>Supabase</span><span>Lovable</span><span>Make.com</span><span>RAG</span><span>Python</span><span>SQL</span><span>Java</span><span>Spring Boot</span><span>Dynamics 365 Business Central</span></div>
+          <div class="tags"><span>Gemini</span><span>Supabase</span><span>Go</span><span>Lovable</span><span>Make.com</span><span>RAG</span><span>Python</span><span>SQL</span><span>Java</span><span>Spring Boot</span><span>Dynamics 365 Business Central</span></div>
         </div>
         <div class="panel">
           <p class="label">Earlier engineering projects</p>
@@ -380,8 +391,8 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding
   <section class="sec" id="projects">
     <div class="sec-head">
       <p class="kicker">projects</p>
-      <h2>AI product builds</h2>
-      <p>Two end-to-end builds. Each marks what was shipped and what was only designed, so you can tell the prototype from the roadmap.</p>
+      <h2>Product builds</h2>
+      <p>Three end-to-end builds, two AI products and one security tool. Each marks what was shipped and what was only designed, so you can tell the prototype from the roadmap.</p>
     </div>
     <div class="builds">
       <article class="build">
@@ -421,6 +432,40 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding
         <div class="meta-row"><span>Lovable</span><span>Make.com</span><span>Gemini</span><span>Airtable</span><span>3-day build</span><span>6 PDFs</span></div>
         <div class="links">
           <a href="https://github.com/manojkumarpm651-hub/bill-to-stock-swift" target="_blank" rel="noopener noreferrer">Repository ↗</a>
+        </div>
+      </article>
+
+      <article class="build wide">
+        <div class="build-top">
+          <div><h3>StarkScan</h3><span class="domain">Security tooling · Desktop &amp; CLI · Open source</span></div>
+          <span class="badge live">● MIT licence</span>
+        </div>
+        <div class="wide-grid">
+          <div class="wide-col">
+            <p class="q"><b>The decision</b>Can a security scanner be trusted to look only at the folders you choose, and never read anything else on your machine?</p>
+            <p>A read-only scanner that checks the files and folders you name for leaked credentials, malware behaviour, disguised files and over-shared permissions. The product bet is trust: it never touches the network, never needs admin rights, and refuses to read outside the folders you choose, even through shortcuts or hidden links.</p>
+            <p>The engine is a single Go binary with zero third-party dependencies, so the tool adds no supply-chain risk of its own. A Windows desktop app sits on top, but it does no scanning itself. It only runs the engine and shows the report, so the safety guarantee stays in one testable place.</p>
+          </div>
+          <div class="wide-col">
+            <ul class="comp">
+              <li><span>Scope gate: refuses links and hardlinks out of the selection</span><span class="chip built">Built</span></li>
+              <li><span>Secrets check, with evidence always redacted</span><span class="chip built">Built</span></li>
+              <li><span>Malware, disguised-file and exposure checks</span><span class="chip built">Built</span></li>
+              <li><span>Windows desktop app with sortable results</span><span class="chip built">Built</span></li>
+              <li><span>OS-level sandboxing (AppContainer)</span><span class="chip designed">Not in scope</span></li>
+            </ul>
+            <div class="mini-stats">
+              <div><b>0</b><span>third-party dependencies</span></div>
+              <div><b>~0.7 ms</b><span>per file scanned</span></div>
+              <div><b>27×</b><span>faster from pattern pre-filters</span></div>
+            </div>
+            <div class="meta-row"><span>Go</span><span>Windows · Linux · macOS</span><span>CLI + desktop GUI</span><span>JSON / text reports</span></div>
+          </div>
+        </div>
+        <p class="note">Disclosed: a clean report means these rules found nothing, not that files are safe. The repo lists every verified blind spot, from archive contents to directory permissions.</p>
+        <div class="links">
+          <a href="https://github.com/manojkumarpm651-hub/starkscan" target="_blank" rel="noopener noreferrer">Repository ↗</a>
+          <a href="https://github.com/manojkumarpm651-hub/starkscan/blob/main/packaging/LIMITATIONS.txt" target="_blank" rel="noopener noreferrer">Known limitations ↗</a>
         </div>
       </article>
     </div>

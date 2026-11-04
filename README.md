@@ -10,6 +10,7 @@ I studied computer applications (BCA, MCA) and completed the Future-Ready Produc
 ## Work
 - **Northstar**: AI care-navigation companion · [live app](https://northstar-navigator-guide.lovable.app) · [repo](https://github.com/manojkumarpm651-hub/northstar-navigator-guide)
 - **Snap-to-Stock 2.0**: AI bill-to-inventory for Vyapar · [repo](https://github.com/manojkumarpm651-hub/bill-to-stock-swift)
+- **StarkScan**: read-only, confined local security scanner in Go · [repo](https://github.com/manojkumarpm651-hub/starkscan)
 - **Duolingo in India**: strategy memo · [repo](https://github.com/manojkumarpm651-hub/duolingo-india-strategy-memo)
 - **Swiggy Instamart**: cohort-economics teardown
 
