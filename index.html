@@ -5,281 +5,353 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0A1020">
 <title>Manoj Kumar P M</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Manoj Kumar P M — AI Product Manager. Case studies, product builds and strategy memos.">
+<meta name="description" content="Manoj Kumar P M, aspiring AI Product Manager in Bengaluru. About, education, AI product builds and strategy memos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a decision ledger — section labels in a left rail, work as entries; each case leads with its decision fork */
+/* Layout: a dark system console. Hero pairs the pitch with a system-info readout; content sits in bordered panels on a faint grid */
 :root{
-  --bg:#F1F3F0;
-  --surface:#FFFFFF;
-  --fg:#16211D;
-  --muted:#5B6862;
-  --line:#D5DBD6;
-  --accent:#2649B8;
-  --accent-soft:#E3E9FA;
-  --built:#1F7A4D;
-  --built-soft:#DDF0E5;
-  --designed:#9A6410;
-  --designed-soft:#F6EBD6;
-  --f-display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
-  --f-body:"Source Serif 4", Georgia, "Times New Roman", serif;
-  --f-mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#111815; --surface:#18211D; --fg:#E6ECE8; --muted:#97A59E; --line:#2C3833;
-    --accent:#8FA8FF; --accent-soft:#1E2A4D;
-    --built:#6FD3A0; --built-soft:#183526; --designed:#E8B65C; --designed-soft:#3A2D14;
-    color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#111815; --surface:#18211D; --fg:#E6ECE8; --muted:#97A59E; --line:#2C3833;
-  --accent:#8FA8FF; --accent-soft:#1E2A4D;
-  --built:#6FD3A0; --built-soft:#183526; --designed:#E8B65C; --designed-soft:#3A2D14;
+  --bg:#0A1020;
+  --bg-2:#0E1629;
+  --panel:#111B31;
+  --panel-hi:#16223D;
+  --line:#22304F;
+  --line-hi:#2F4370;
+  --fg:#E4EBF7;
+  --soft:#C3CDE0;
+  --muted:#8C9BB8;
+  --dim:#6A7999;
+  --cyan:#3DD9EB;
+  --cyan-soft:rgba(61,217,235,.12);
+  --violet:#A48CFF;
+  --violet-soft:rgba(164,140,255,.12);
+  --green:#5BE3A1;
+  --green-soft:rgba(91,227,161,.12);
+  --amber:#F2C065;
+  --amber-soft:rgba(242,192,101,.12);
+  --red:#F27676;
+  --ink:#06121F;
+  --f-display:"Sora","Segoe UI",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
-a:hover{text-decoration-thickness:2px}
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-.wrap{max-width:1040px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+html{scroll-behavior:smooth}
+body{
+  background-color:var(--bg);
+  background-image:
+    radial-gradient(900px 500px at 85% -10%, rgba(61,217,235,.10), transparent 60%),
+    radial-gradient(700px 500px at -10% 30%, rgba(164,140,255,.07), transparent 60%),
+    linear-gradient(var(--bg-2) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg-2) 1px, transparent 1px);
+  background-size:auto,auto,44px 44px,44px 44px;
+  color:var(--fg);font-family:var(--f-body);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--cyan);color:var(--ink)}
+a{color:var(--cyan);text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
 
 /* nav */
-.nav{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;justify-content:space-between;padding-block:22px;border-bottom:1px solid var(--line)}
-.mark{font-family:var(--f-display);font-weight:800;font-size:1.05rem;letter-spacing:-.01em;color:var(--fg);text-decoration:none}
-.nav ul{display:flex;flex-wrap:wrap;gap:4px 20px;list-style:none;margin:0;padding:0;font-family:var(--f-mono);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
-.nav ul a{color:var(--muted);text-decoration:none}
-.nav ul a:hover{color:var(--fg)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--bg)}
+.nav{position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;background:rgba(10,16,32,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none;font-family:var(--f-display);font-weight:700;letter-spacing:-.01em}
+.brand i{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-style:normal;font-size:.78rem;font-weight:800;color:var(--ink);background:linear-gradient(135deg,var(--cyan),var(--violet))}
+.nav ul{display:flex;flex-wrap:wrap;gap:4px 6px;list-style:none;margin:0;padding:0}
+.nav ul a{display:block;padding:6px 10px;border-radius:6px;color:var(--muted);text-decoration:none;font-family:var(--f-mono);font-size:.78rem}
+.nav ul a:hover{color:var(--fg);background:var(--panel)}
 
 /* hero */
-.hero{padding-block:72px 56px;display:grid;gap:28px}
-.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0}
-.hero h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.6rem, 7.4vw, 5.4rem);line-height:.98;letter-spacing:-.035em;margin:0;text-wrap:balance;max-width:14ch}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.lede{font-size:1.2rem;max-width:60ch;margin:0;color:var(--fg)}
-.lede span{color:var(--muted)}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
-.btn{font-family:var(--f-mono);font-size:.82rem;letter-spacing:.04em;padding:11px 16px;border:1px solid var(--fg);color:var(--fg);text-decoration:none;display:inline-flex;gap:8px;align-items:center;transition:background .15s,color .15s}
-.btn.primary{background:var(--fg);color:var(--bg)}
-.btn:hover{background:var(--accent);border-color:var(--accent);color:var(--surface);text-decoration:none}
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;padding-block:80px 64px}
+.status{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:.78rem;color:var(--green);background:var(--green-soft);border:1px solid rgba(91,227,161,.25);padding:6px 12px;border-radius:999px;margin:0 0 22px}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+.hero h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.5rem,6.2vw,4.4rem);line-height:1.03;letter-spacing:-.035em;margin:0 0 20px;text-wrap:balance}
+.hero h1 .grad{background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-family:var(--f-mono);color:var(--cyan);font-size:.92rem;margin:0 0 18px}
+.lede{font-size:1.12rem;color:var(--muted);max-width:56ch;margin:0 0 30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:10px;font-family:var(--f-mono);font-size:.85rem;font-weight:500;text-decoration:none;border:1px solid var(--line-hi);color:var(--fg);background:var(--panel);transition:border-color .2s,transform .2s,box-shadow .2s}
+.btn:hover{border-color:var(--cyan);transform:translateY(-1px)}
+.btn.primary{background:var(--cyan);color:var(--ink);border-color:var(--cyan)}
+.btn.primary:hover{box-shadow:0 6px 28px -6px rgba(61,217,235,.6)}
 
-/* count line */
-.tally{display:flex;flex-wrap:wrap;gap:10px 36px;padding-block:18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-family:var(--f-mono);font-size:.82rem;color:var(--muted)}
-.tally b{font-family:var(--f-display);font-size:1.5rem;color:var(--fg);font-weight:700;margin-right:6px;font-variant-numeric:tabular-nums}
+/* system info panel */
+.term{background:var(--panel);border:1px solid var(--line-hi);border-radius:14px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.7);min-width:0}
+.term-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line);background:var(--panel-hi)}
+.term-bar span{width:10px;height:10px;border-radius:50%}
+.term-bar span:nth-child(1){background:var(--red)}.term-bar span:nth-child(2){background:var(--amber)}.term-bar span:nth-child(3){background:var(--green)}
+.term-bar b{margin-left:8px;font-family:var(--f-mono);font-weight:400;font-size:.75rem;color:var(--dim)}
+.term-body{padding:20px 20px 22px;font-family:var(--f-mono);font-size:.84rem;line-height:1.85;overflow-x:auto}
+.cmd{color:var(--muted)}.cmd b{color:var(--green);font-weight:500;margin-right:6px}
+.host{color:var(--cyan);font-weight:500;margin-top:6px}
+.rule{color:var(--dim)}
+.term-body dl{margin:0;display:grid;grid-template-columns:max-content minmax(0,1fr);gap:0 14px}
+.term-body dt{color:var(--violet)}
+.term-body dd{margin:0;color:var(--fg)}
+.swatches{display:flex;gap:6px;margin-top:12px}
+.swatches i{width:22px;height:12px;border-radius:2px}
+.sw1{background:var(--cyan)}.sw2{background:var(--violet)}.sw3{background:var(--green)}.sw4{background:var(--amber)}.sw5{background:var(--red)}
+.cursor{display:inline-block;width:8px;height:1em;background:var(--cyan);vertical-align:-2px}
+.prompt2{margin-top:10px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden}
+.stats div{padding:22px 24px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:var(--f-display);font-size:1.9rem;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.15}
+.stats span{font-family:var(--f-mono);font-size:.75rem;color:var(--muted)}
 
 /* sections */
-section.block{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px 48px;padding-block:72px;border-bottom:1px solid var(--line)}
-.rail{position:relative}
-.rail h2{font-family:var(--f-mono);font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:6px 0 0;position:sticky;top:calc(env(safe-area-inset-top, 0px) + 20px)}
-.content{min-width:0;display:grid;gap:40px}
-.intro{font-size:1.1rem;max-width:62ch;margin:0;color:var(--muted)}
-
-/* case entries */
-.case{background:var(--surface);border:1px solid var(--line);padding:clamp(22px,4vw,40px);display:grid;gap:22px}
-.case-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;align-items:baseline}
-.case h3{font-family:var(--f-display);font-weight:700;font-size:clamp(1.7rem,3.6vw,2.3rem);letter-spacing:-.02em;line-height:1.05;margin:0;text-wrap:balance}
-.kind{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.fork{border-left:3px solid var(--accent);padding:4px 0 4px 18px;margin:0}
-.fork .label{display:block;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
-.fork p{margin:0;font-size:1.12rem;font-style:italic}
-.case p{margin:0;max-width:66ch}
-.ledger-wrap{overflow-x:auto}
-table.ledger{width:100%;border-collapse:collapse;font-size:.95rem;min-width:440px}
-.ledger th{text-align:left;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;padding:0 12px 8px 0;border-bottom:1px solid var(--line)}
-.ledger td{padding:11px 12px 11px 0;border-bottom:1px solid var(--line);vertical-align:top}
-.ledger tr:last-child td{border-bottom:0}
-.chip{display:inline-block;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;white-space:nowrap}
-.chip.built{background:var(--built-soft);color:var(--built)}
-.chip.designed{background:var(--designed-soft);color:var(--designed)}
-.chip.queued{background:var(--accent-soft);color:var(--accent)}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px 28px;margin:0}
-.facts div{min-width:0}
-.facts dt{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-.facts dd{margin:0;font-size:.98rem}
-.links{display:flex;flex-wrap:wrap;gap:10px 22px;font-family:var(--f-mono);font-size:.82rem;padding-top:18px;border-top:1px solid var(--line)}
-.links a{text-decoration:none;font-weight:500}
-.links a:hover{text-decoration:underline}
-
-/* memo list */
-.memos{display:grid;gap:0;border-top:1px solid var(--line)}
-.memo{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;padding-block:28px;border-bottom:1px solid var(--line)}
-.memo h3{font-family:var(--f-display);font-weight:700;font-size:1.45rem;letter-spacing:-.015em;line-height:1.15;margin:0 0 4px;text-wrap:balance}
-.memo .title{font-style:italic;color:var(--muted);margin:0 0 10px}
-.memo p{margin:0;max-width:62ch}
-.memo .side{text-align:right;display:grid;gap:8px;align-content:start;justify-items:end}
-.memo .side a{font-family:var(--f-mono);font-size:.8rem;text-decoration:none;white-space:nowrap}
-.memo .side a:hover{text-decoration:underline}
-
-/* principles */
-.principles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px 40px}
-.principles h3{font-family:var(--f-display);font-size:1.2rem;font-weight:700;letter-spacing:-.01em;margin:0 0 6px}
-.principles p{margin:0;color:var(--muted);font-size:.98rem}
-
-/* stack + creds */
-.tags{display:flex;flex-wrap:wrap;gap:8px}
-.tags span{font-family:var(--f-mono);font-size:.8rem;padding:6px 11px;border:1px solid var(--line);background:var(--surface)}
-.sub{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
-.creds{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
-.creds li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 20px;padding-block:16px;border-bottom:1px solid var(--line)}
-.creds strong{font-weight:600}
-.creds .meta{display:block;color:var(--muted);font-size:.94rem}
-.creds .score{font-family:var(--f-mono);font-size:.85rem;color:var(--fg);font-variant-numeric:tabular-nums;white-space:nowrap;align-self:start;padding-top:3px}
-
-/* contact */
-.contact h2.big{font-family:var(--f-display);font-weight:800;font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.03em;line-height:1;margin:0;text-wrap:balance;max-width:16ch}
-.contact-list{display:grid;gap:0;border-top:1px solid var(--line)}
-.contact-list a{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding-block:18px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--fg);min-width:0}
-.contact-list a span:first-child{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.contact-list a span:last-child{font-family:var(--f-display);font-weight:500;font-size:1.05rem;overflow-wrap:anywhere;text-align:right}
-.contact-list a:hover span:last-child{color:var(--accent)}
-footer{padding-block:32px 48px;font-family:var(--f-mono);font-size:.76rem;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
-
-@media (max-width:760px){
-  body{font-size:16px}
-  section.block{grid-template-columns:minmax(0,1fr);padding-block:52px;gap:18px}
-  .rail h2{position:static}
-  .hero{padding-block:48px 40px}
-  .memo{grid-template-columns:minmax(0,1fr)}
-  .memo .side{text-align:left;justify-items:start;grid-auto-flow:column;justify-content:start;gap:16px;align-items:center}
-}
-@media (prefers-reduced-motion:no-preference){
-  .hero > *{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
-  .hero > *:nth-child(2){animation-delay:.06s}
-  .hero > *:nth-child(3){animation-delay:.12s}
-  .hero > *:nth-child(4){animation-delay:.18s}
-  @keyframes rise{from{transform:translateY(10px);opacity:.01}to{transform:none;opacity:1}}
-}
+.sec{padding-block:96px 0}
+.sec-head{display:grid;gap:10px;margin-bottom:36px;max-width:720px}
+.sec-head.later{margin-top:72px}
+.kicker{font-family:var(--f-mono);font-size:.8rem;color:var(--cyan);margin:0}
+.kicker::before{content:"// ";color:var(--dim)}
+.sec-head h2{font-family:var(--f-display);font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:700;letter-spacing:-.025em;line-height:1.12;margin:0;text-wrap:balance}
+.sec-head p{margin:0;color:var(--muted);font-size:1.05rem}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:clamp(22px,3.4vw,32px);min-width:0}
+.label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:0 0 14px}
 
 /* about */
-.about{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px;align-items:start}
-.bio{display:grid;gap:16px;min-width:0}
-.bio p{margin:0;max-width:62ch}
-.bio-lead{font-family:var(--f-display);font-weight:700;font-size:clamp(1.5rem,3vw,2rem);line-height:1.15;letter-spacing:-.02em;text-wrap:balance}
-.now{border-top:1px solid var(--line);padding-top:16px;color:var(--muted)}
-.now span{display:block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
-.card{background:var(--surface);border:1px solid var(--line);padding:24px;display:grid;gap:20px;min-width:0}
-.mono{width:64px;height:64px;display:grid;place-items:center;background:var(--fg);color:var(--bg);font-family:var(--f-display);font-weight:800;font-size:1.4rem;letter-spacing:-.02em}
-.details{margin:0;display:grid;gap:14px}
-.details div{min-width:0}
-.details dt{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
-.details dd{margin:0;font-size:.95rem;overflow-wrap:anywhere}
-.tally.inline{border-top:0;padding-top:0}
-@media (max-width:900px){.about{grid-template-columns:minmax(0,1fr)}}
+.about{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px;align-items:start}
+.bio{display:grid;gap:16px}
+.bio p{margin:0;color:var(--soft);max-width:64ch}
+.bio .lead{font-family:var(--f-display);font-size:clamp(1.3rem,2.4vw,1.6rem);font-weight:600;line-height:1.3;color:var(--fg);letter-spacing:-.015em}
+.now{display:flex;gap:14px;align-items:flex-start;margin-top:6px;padding:14px 16px;border-radius:10px;background:var(--cyan-soft);border:1px solid rgba(61,217,235,.22)}
+.now span{flex:none;font-family:var(--f-mono);font-size:.72rem;color:var(--cyan);text-transform:uppercase;letter-spacing:.08em;padding-top:3px}
+.now p{margin:0;color:var(--fg);font-size:.97rem}
+.kv{margin:0;display:grid;gap:12px}
+.kv div{display:grid;grid-template-columns:104px minmax(0,1fr);gap:12px;padding-bottom:12px;border-bottom:1px dashed var(--line)}
+.kv div:last-child{border-bottom:0;padding-bottom:0}
+.kv dt{font-family:var(--f-mono);font-size:.75rem;color:var(--dim);padding-top:2px}
+.kv dd{margin:0;font-size:.95rem;overflow-wrap:anywhere}
+.about-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;margin-top:20px}
+table.langs{width:100%;border-collapse:collapse;font-size:.95rem}
+.langs th,.langs td{padding:10px 8px 10px 0;border-bottom:1px solid var(--line);text-align:left}
+.langs tbody tr:last-child th,.langs tbody tr:last-child td{border-bottom:0}
+.langs thead th{font-family:var(--f-mono);font-size:.7rem;font-weight:400;color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
+.langs thead th:not(:first-child),.langs td{text-align:center;width:62px}
+.langs tbody th{font-weight:500}
+.native{display:inline-block;margin-left:8px;font-family:var(--f-mono);font-size:.66rem;color:var(--cyan);border:1px solid rgba(61,217,235,.35);padding:1px 6px;border-radius:4px;vertical-align:1px;font-weight:400}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px rgba(61,217,235,.6)}
+.dot.off{background:transparent;border:1px solid var(--line-hi);box-shadow:none}
+.interests{display:grid;gap:16px}
+.interest{display:grid;grid-template-columns:38px minmax(0,1fr);gap:14px;align-items:start}
+.interest i{width:38px;height:38px;border-radius:9px;display:grid;place-items:center;background:var(--panel-hi);border:1px solid var(--line);font-style:normal;font-family:var(--f-mono);font-size:.74rem;color:var(--violet)}
+.interest b{display:block;font-weight:600;font-size:.97rem}
+.interest span{color:var(--muted);font-size:.93rem}
+.interest cite{color:var(--fg)}
 
-.beyond{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;padding-top:8px}
-.lang-wrap{overflow-x:auto}
-table.langs{border-collapse:collapse;width:100%;font-size:.95rem}
-.langs th,.langs td{padding:10px 10px 10px 0;border-bottom:1px solid var(--line);text-align:left}
-.langs thead th{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
-.langs tbody th{font-weight:600}
-.langs td{text-align:center;width:64px;font-size:1rem}
-.langs thead th:not(:first-child){text-align:center}
-.langs td.y{color:var(--accent)}
-.langs td.n{color:var(--line)}
-.native{display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:400}
-.interests cite{font-style:italic}
-@media (max-width:760px){.beyond{grid-template-columns:minmax(0,1fr)}}
+/* education */
+.edu{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px;align-items:start}
+.creds{list-style:none;margin:0;padding:0}
+.creds li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding-block:14px;border-bottom:1px solid var(--line)}
+.creds li:first-child{padding-top:0}
+.creds li:last-child{border-bottom:0;padding-bottom:0}
+.creds strong{font-weight:600}
+.creds .meta{display:block;color:var(--muted);font-size:.9rem}
+.score{font-family:var(--f-mono);font-size:.8rem;color:var(--cyan);background:var(--cyan-soft);padding:3px 9px;border-radius:6px;align-self:start;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-family:var(--f-mono);font-size:.8rem;padding:6px 11px;border-radius:7px;background:var(--panel-hi);border:1px solid var(--line);color:var(--soft)}
+.stack-side{display:grid;gap:20px}
+
+/* projects */
+.builds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.build{display:grid;gap:18px;align-content:start;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:clamp(22px,3vw,30px);transition:border-color .25s,transform .25s,box-shadow .25s;min-width:0}
+.build:hover{border-color:var(--line-hi);transform:translateY(-2px);box-shadow:0 24px 60px -30px rgba(61,217,235,.35)}
+.build-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.build h3{font-family:var(--f-display);font-size:1.6rem;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin:0}
+.domain{font-family:var(--f-mono);font-size:.72rem;color:var(--violet);margin-top:6px;display:block}
+.badge{font-family:var(--f-mono);font-size:.72rem;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.badge.live{color:var(--green);background:var(--green-soft);border:1px solid rgba(91,227,161,.25)}
+.badge.proto{color:var(--violet);background:var(--violet-soft);border:1px solid rgba(164,140,255,.25)}
+.q{margin:0;padding:14px 16px;border-radius:10px;background:var(--bg-2);border:1px solid var(--line);font-size:.97rem;color:var(--soft)}
+.q b{display:block;font-family:var(--f-mono);font-size:.7rem;font-weight:400;color:var(--cyan);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.build > p{margin:0;color:var(--muted);font-size:.96rem}
+.comp{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.comp li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;font-size:.93rem;padding:9px 12px;border-radius:8px;background:var(--bg-2)}
+.chip{font-family:var(--f-mono);font-size:.68rem;padding:3px 8px;border-radius:5px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.chip.built{color:var(--green);background:var(--green-soft)}
+.chip.designed{color:var(--amber);background:var(--amber-soft)}
+.chip.wip{color:var(--violet);background:var(--violet-soft)}
+.meta-row{display:flex;flex-wrap:wrap;gap:6px}
+.meta-row span{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);border:1px solid var(--line);padding:3px 8px;border-radius:6px}
+.build > p.note{font-size:.9rem;color:var(--dim);border-left:2px solid var(--amber);padding-left:12px}
+.links{display:flex;flex-wrap:wrap;gap:10px;padding-top:4px}
+.links a{font-family:var(--f-mono);font-size:.82rem;text-decoration:none;padding:8px 12px;border-radius:8px;border:1px solid var(--line-hi);color:var(--fg)}
+.links a:hover{border-color:var(--cyan);color:var(--cyan)}
+
+.memos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.memo{display:grid;gap:12px;align-content:start;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px;min-width:0}
+.memo-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.memo-top .label{margin:0}
+.memo h3{font-family:var(--f-display);font-size:1.2rem;font-weight:700;letter-spacing:-.015em;margin:0;line-height:1.2}
+.memo .sub{font-style:italic;color:var(--cyan);margin:0;font-size:.95rem}
+.memo p{margin:0;color:var(--muted);font-size:.93rem}
+.memo a{font-family:var(--f-mono);font-size:.8rem;text-decoration:none}
+.memo a:hover{text-decoration:underline}
+
+/* method */
+.method{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.method div{background:var(--panel);padding:26px}
+.method code{font-family:var(--f-mono);font-size:.74rem;color:var(--violet)}
+.method h3{font-family:var(--f-display);font-size:1.08rem;font-weight:600;margin:8px 0 6px;letter-spacing:-.01em}
+.method p{margin:0;color:var(--muted);font-size:.93rem}
+
+/* contact */
+.contact{margin-top:96px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:center;padding:clamp(28px,5vw,48px);border-radius:20px;border:1px solid var(--line-hi);background:linear-gradient(135deg,rgba(61,217,235,.10),rgba(164,140,255,.08) 60%,transparent),var(--panel)}
+.contact h2{font-family:var(--f-display);font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin:10px 0 12px;text-wrap:balance}
+.contact p{margin:0;color:var(--muted)}
+.clinks{display:grid;gap:10px;min-width:0}
+.clinks a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 18px;border-radius:12px;background:var(--bg-2);border:1px solid var(--line);color:var(--fg);text-decoration:none;transition:border-color .2s}
+.clinks a:hover{border-color:var(--cyan)}
+.clinks span{font-family:var(--f-mono);font-size:.74rem;color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
+.clinks b{font-weight:500;font-size:.98rem;overflow-wrap:anywhere;text-align:right}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding-block:40px 48px;margin-top:48px;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.76rem;color:var(--dim)}
+
+@media (max-width:960px){
+  .hero{grid-template-columns:minmax(0,1fr);padding-block:56px 48px;gap:36px}
+  .about,.edu,.contact{grid-template-columns:minmax(0,1fr)}
+  .memos,.method{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  .builds,.memos,.method,.about-row{grid-template-columns:minmax(0,1fr)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats div:nth-child(2){border-right:0}
+  .stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .sec{padding-block:72px 0}
+  .kv div{grid-template-columns:92px minmax(0,1fr)}
+  .nav ul{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  .cursor{animation:blink 1.1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.build{transition:none}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="nav">
-    <a class="mark" href="#top">Manoj Kumar P M</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><i>MK</i>Manoj Kumar P M</a>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#background">Education</a></li>
-      <li><a href="#builds">Projects</a></li>
-      <li><a href="#method">Method</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#education">education</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#method">method</a></li>
+      <li><a href="#contact">contact</a></li>
     </ul>
-  </header>
+  </div>
+</header>
 
-  <div class="hero" id="top">
-    <p class="eyebrow">AI Product Manager · Bengaluru</p>
-    <h1>I pick the decision, then <em>build enough</em> to prove it.</h1>
-    <p class="lede">Product case studies where the AI feature actually runs, the metrics are grounded in primary sources, and the limits are written down. <span>Every claim on this page links to a live build or a public repo.</span></p>
-    <div class="cta">
-      <a class="btn primary" href="Manoj-Kumar-PM-Resume.pdf" target="_blank" rel="noopener noreferrer">Download résumé (PDF)</a>
-      <a class="btn" href="#about">About me ↓</a>
-      <a class="btn" href="#builds">See the work ↓</a>
-      <a class="btn" href="https://github.com/manojkumarpm651-hub" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-      <a class="btn" href="https://www.linkedin.com/in/manoj-kumar-p-m-7a028a444" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+<main class="wrap" id="top">
+  <div class="hero">
+    <div>
+      <p class="status">Open to APM &amp; AI PM roles</p>
+      <h1>I pick the decision, then <span class="grad">build enough to prove it.</span></h1>
+      <p class="role">&gt; aspiring AI Product Manager · Whitefield, Bengaluru</p>
+      <p class="lede">I write product case studies where the AI feature actually runs, the numbers come from primary sources, and the limits are written down. Every claim here links to a live build or a public repo.</p>
+      <div class="cta">
+        <a class="btn primary" href="Manoj-Kumar-PM-Resume.pdf" target="_blank" rel="noopener noreferrer">Download résumé ↓</a>
+        <a class="btn" href="#projects">View projects</a>
+        <a class="btn" href="https://www.linkedin.com/in/manoj-kumar-p-m-7a028a444" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <div class="term" aria-label="Profile summary">
+      <div class="term-bar"><span></span><span></span><span></span><b>manoj@bengaluru: ~</b></div>
+      <div class="term-body">
+        <div class="cmd"><b>$</b>sysinfo --about-me</div>
+        <div class="host">manoj@bengaluru</div>
+        <div class="rule">───────────────────</div>
+        <dl>
+          <dt>Role</dt><dd>Aspiring AI Product Manager</dd>
+          <dt>Location</dt><dd>Whitefield, Bengaluru</dd>
+          <dt>Education</dt><dd>MCA · BCA</dd>
+          <dt>Training</dt><dd>PM with Applied AI, IIT Roorkee</dd>
+          <dt>Capstone</dt><dd>9.4 / 10</dd>
+          <dt>Stack</dt><dd>Gemini · Supabase · Lovable</dd>
+          <dt>Languages</dt><dd>ಕನ್ನಡ · English · हिन्दी · తెలుగు</dd>
+          <dt>Off-duty</dt><dd>PC builds · badminton · books</dd>
+        </dl>
+        <div class="swatches" aria-hidden="true"><i class="sw1"></i><i class="sw2"></i><i class="sw3"></i><i class="sw4"></i><i class="sw5"></i></div>
+        <div class="cmd prompt2"><b>$</b><span class="cursor"></span></div>
+      </div>
     </div>
   </div>
 
+  <div class="stats" aria-label="At a glance">
+    <div><b>2</b><span>AI product builds</span></div>
+    <div><b>2</b><span>strategy memos published</span></div>
+    <div><b>10/10</b><span>Northstar test scenarios passed</span></div>
+    <div><b>9.4</b><span>capstone score out of 10</span></div>
+  </div>
 
   <!-- ABOUT -->
-  <section class="block" id="about">
-    <div class="rail"><h2>About me</h2></div>
-    <div class="content">
-      <div class="about">
-        <div class="bio">
-          <p class="bio-lead">Hi, I'm Manoj. I'm an aspiring AI Product Manager from Whitefield, Bengaluru.</p>
-          <p>I've always been more curious about why a product exists than about how its code is written. Product management drew me in because it sits where that curiosity is useful: understanding how people actually use a product, what it does for them, and how to shape it with the clients who depend on it.</p>
-          <p>I studied computer applications, with a BCA and an MCA. I'm not a full-time coder, but I'm solid on the fundamentals. I can read how a system fits together, talk through trade-offs with engineers, and tell whether an idea is feasible before a team commits to it. Where I'm strongest is understanding the product itself: who it's for, the problem it solves, and how to manage it over time.</p>
-          <p>I completed the Future-Ready Product Management with Applied AI programme from Masai School and IIT Roorkee, where my capstone scored 9.4 out of 10. Since then I've been building a portfolio that shows how I think: one open decision per case, primary sources behind every number, and a working prototype where the decision depends on AI.</p>
-          <p class="now"><span>Right now</span>Writing a hard-tradeoff memo on Tesla's Supercharger network, and building an AI tool that scans websites for phishing threats.</p>
-        </div>
-        <aside class="card" aria-label="My details">
-          <div class="mono" aria-hidden="true">MK</div>
-          <dl class="details">
-            <div><dt>Name</dt><dd>Manoj Kumar P M</dd></div>
-            <div><dt>Role</dt><dd>Aspiring AI Product Manager</dd></div>
-            <div><dt>Based in</dt><dd>Whitefield, Bengaluru, Karnataka</dd></div>
-            <div><dt>Languages</dt><dd>Kannada (native), English, Hindi, Telugu</dd></div>
-            <div><dt>Looking for</dt><dd>APM and AI PM roles</dd></div>
-            <div><dt>Education</dt><dd>MCA · BCA · PM with Applied AI (Masai × IIT Roorkee)</dd></div>
-            <div><dt>Focus</dt><dd>AI products, B2B SaaS, healthcare, MSME tools</dd></div>
-            <div><dt>Find me</dt><dd><a href="https://www.linkedin.com/in/manoj-kumar-p-m-7a028a444" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a> · <a href="https://github.com/manojkumarpm651-hub" target="_blank" rel="noopener noreferrer">GitHub ↗</a></dd></div>
-          </dl>
-        </aside>
+  <section class="sec" id="about">
+    <div class="sec-head">
+      <p class="kicker">about me</p>
+      <h2>Curious about why products exist, and how people use them.</h2>
+    </div>
+    <div class="about">
+      <div class="panel bio">
+        <p class="lead">Hi, I'm Manoj. I'm an aspiring AI Product Manager from Whitefield, Bengaluru.</p>
+        <p>I've always been more curious about why a product exists than about how its code is written. Product management drew me in because it sits where that curiosity is useful: understanding how people actually use a product, what it does for them, and how to shape it with the clients who depend on it.</p>
+        <p>I studied computer applications, with a BCA and an MCA. I'm not a full-time coder, but I'm solid on the fundamentals. I can read how a system fits together, talk through trade-offs with engineers, and tell whether an idea is feasible before a team commits to it. Where I'm strongest is understanding the product itself: who it's for, the problem it solves, and how to manage it over time.</p>
+        <p>I completed the Future-Ready Product Management with Applied AI programme from Masai School and IIT Roorkee, where my capstone scored 9.4 out of 10. Since then I've been building a portfolio that shows how I think: one open decision per case, primary sources behind every number, and a working prototype where the decision depends on AI.</p>
+        <div class="now"><span>Now</span><p>Writing a hard-tradeoff memo on Tesla's Supercharger network, and building an AI tool that scans websites for phishing threats.</p></div>
       </div>
-
-      <div class="beyond">
-        <div class="lang">
-          <p class="sub">Languages</p>
-          <div class="lang-wrap">
-            <table class="langs">
-              <thead><tr><th scope="col">Language</th><th scope="col">Speak</th><th scope="col">Read</th><th scope="col">Write</th></tr></thead>
-              <tbody>
-                <tr><th scope="row">Kannada <span class="native">Mother tongue</span></th><td class="y" aria-label="Yes">●</td><td class="y" aria-label="Yes">●</td><td class="y" aria-label="Yes">●</td></tr>
-                <tr><th scope="row">English</th><td class="y" aria-label="Yes">●</td><td class="y" aria-label="Yes">●</td><td class="y" aria-label="Yes">●</td></tr>
-                <tr><th scope="row">Hindi</th><td class="y" aria-label="Yes">●</td><td class="y" aria-label="Yes">●</td><td class="y" aria-label="Yes">●</td></tr>
-                <tr><th scope="row">Telugu</th><td class="y" aria-label="Yes">●</td><td class="y" aria-label="Yes">●</td><td class="n" aria-label="No">○</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+      <div class="panel">
+        <p class="label">Details</p>
+        <dl class="kv">
+          <div><dt>Name</dt><dd>Manoj Kumar P M</dd></div>
+          <div><dt>Role</dt><dd>Aspiring AI Product Manager</dd></div>
+          <div><dt>Based in</dt><dd>Whitefield, Bengaluru, Karnataka</dd></div>
+          <div><dt>Looking for</dt><dd>APM and AI PM roles</dd></div>
+          <div><dt>Focus</dt><dd>AI products, B2B SaaS, healthcare, MSME tools</dd></div>
+          <div><dt>Find me</dt><dd><a href="https://www.linkedin.com/in/manoj-kumar-p-m-7a028a444" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a> · <a href="https://github.com/manojkumarpm651-hub" target="_blank" rel="noopener noreferrer">GitHub ↗</a></dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="about-row">
+      <div class="panel">
+        <p class="label">Languages</p>
+        <table class="langs">
+          <thead><tr><th scope="col">Language</th><th scope="col">Speak</th><th scope="col">Read</th><th scope="col">Write</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Kannada<span class="native">native</span></th><td><span class="dot" aria-label="Yes"></span></td><td><span class="dot" aria-label="Yes"></span></td><td><span class="dot" aria-label="Yes"></span></td></tr>
+            <tr><th scope="row">English</th><td><span class="dot" aria-label="Yes"></span></td><td><span class="dot" aria-label="Yes"></span></td><td><span class="dot" aria-label="Yes"></span></td></tr>
+            <tr><th scope="row">Hindi</th><td><span class="dot" aria-label="Yes"></span></td><td><span class="dot" aria-label="Yes"></span></td><td><span class="dot" aria-label="Yes"></span></td></tr>
+            <tr><th scope="row">Telugu</th><td><span class="dot" aria-label="Yes"></span></td><td><span class="dot" aria-label="Yes"></span></td><td><span class="dot off" aria-label="No"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <p class="label">Outside work</p>
         <div class="interests">
-          <p class="sub">Outside work</p>
-          <dl class="details">
-            <div><dt>Tech I tinker with</dt><dd>PC hardware and operating systems</dd></div>
-            <div><dt>Sport</dt><dd>Badminton and cricket</dd></div>
-            <div><dt>Reading</dt><dd>Fiction across genres. A few I've read: <cite>The Alchemist</cite>, <cite>Full Wolf Moon</cite>, and Jo Nesbø's <cite>Macbeth</cite>.</dd></div>
-          </dl>
+          <div class="interest"><i>HW</i><div><b>PC hardware &amp; operating systems</b><span>Components, builds, and how an OS ties them together.</span></div></div>
+          <div class="interest"><i>SP</i><div><b>Badminton &amp; cricket</b><span>On the court and on the field.</span></div></div>
+          <div class="interest"><i>BK</i><div><b>Reading</b><span>A few I've read: <cite>The Alchemist</cite>, <cite>Full Wolf Moon</cite>, and Jo Nesbø's <cite>Macbeth</cite>.</span></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BACKGROUND -->
-  <section class="block" id="background">
-    <div class="rail"><h2>Education &amp; skills</h2></div>
-    <div class="content">
-      <div>
-        <p class="sub">Tools I build with</p>
-        <div class="tags">
-          <span>Gemini</span><span>Supabase</span><span>Lovable</span><span>Make.com</span><span>RAG</span><span>Python</span><span>SQL</span><span>Java</span><span>Spring Boot</span><span>Dynamics 365 Business Central</span>
-        </div>
-      </div>
-      <div>
-        <p class="sub">Education &amp; credentials</p>
+  <!-- EDUCATION -->
+  <section class="sec" id="education">
+    <div class="sec-head">
+      <p class="kicker">education &amp; skills</p>
+      <h2>A computer applications base, trained for product.</h2>
+    </div>
+    <div class="edu">
+      <div class="panel">
+        <p class="label">Education &amp; credentials</p>
         <ul class="creds">
           <li><div><strong>Future-Ready Product Management with Applied AI</strong><span class="meta">Masai School × IIT Roorkee · capstone 9.4 / 10</span></div><span class="score">CGPA 7.15</span></li>
           <li><div><strong>Master of Computer Applications (MCA)</strong></div><span class="score">CGPA 8.35</span></li>
@@ -288,188 +360,134 @@ table.langs{border-collapse:collapse;width:100%;font-size:.95rem}
           <li><div><strong>Research paper, ICSSIT-2023</strong><span class="meta">Co-author, published conference paper</span></div><span class="score">2023</span></li>
         </ul>
       </div>
-      <div>
-        <p class="sub">Earlier engineering projects</p>
-        <ul class="creds">
-          <li><div><strong>Caketopia POS system</strong><span class="meta">Point-of-sale application in Java, Spring Boot and MySQL</span></div></li>
-          <li><div><strong>Email spam classifier</strong><span class="meta">Machine-learning classifier in Python</span></div></li>
-        </ul>
+      <div class="stack-side">
+        <div class="panel">
+          <p class="label">Tools I build with</p>
+          <div class="tags"><span>Gemini</span><span>Supabase</span><span>Lovable</span><span>Make.com</span><span>RAG</span><span>Python</span><span>SQL</span><span>Java</span><span>Spring Boot</span><span>Dynamics 365 Business Central</span></div>
+        </div>
+        <div class="panel">
+          <p class="label">Earlier engineering projects</p>
+          <ul class="creds">
+            <li><div><strong>Caketopia POS system</strong><span class="meta">Point-of-sale app in Java, Spring Boot and MySQL</span></div></li>
+            <li><div><strong>Email spam classifier</strong><span class="meta">Machine-learning classifier in Python</span></div></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- BUILDS -->
-  <section class="block" id="builds">
-    <div class="rail"><h2>Projects<br>AI product builds</h2></div>
-    <div class="content">
-      <div class="tally inline" aria-label="Portfolio at a glance">
-    <span><b>2</b>AI product builds</span>
-    <span><b>2</b>strategy memos</span>
-    <span><b>10/10</b>Northstar test scenarios passed</span>
-    <span><b>9.4</b>capstone score out of 10</span>
-  </div>
-      <p class="intro">Two end-to-end builds. Each one separates what was shipped from what was only designed, so a reviewer can tell the prototype from the roadmap.</p>
-
-      <article class="case">
-        <div class="case-head">
-          <h3>Northstar</h3>
-          <span class="kind">B2B2C · Healthcare navigation</span>
+  <!-- PROJECTS -->
+  <section class="sec" id="projects">
+    <div class="sec-head">
+      <p class="kicker">projects</p>
+      <h2>AI product builds</h2>
+      <p>Two end-to-end builds. Each marks what was shipped and what was only designed, so you can tell the prototype from the roadmap.</p>
+    </div>
+    <div class="builds">
+      <article class="build">
+        <div class="build-top">
+          <div><h3>Northstar</h3><span class="domain">B2B2C · US healthcare navigation</span></div>
+          <span class="badge live">● live</span>
         </div>
-        <blockquote class="fork">
-          <span class="label">The decision</span>
-          <p>Can a post-diagnosis care-navigation companion be useful to patients while staying on the non-device side of FDA clinical decision support guidance?</p>
-        </blockquote>
-        <p>A companion that helps patients find their way through care after a diagnosis, sold through providers. The B2B wedge is the CMS Principal Illness Navigation reimbursement from January 2024, the first sustainable non-grant funding mechanism for this kind of service.</p>
-        <div class="ledger-wrap">
-          <table class="ledger">
-            <thead><tr><th>Component</th><th>What it does</th><th>Status</th></tr></thead>
-            <tbody>
-              <tr><td>Emergency gate</td><td>Deterministic check that responds in under a second and bypasses the model entirely</td><td><span class="chip built">Built</span></td></tr>
-              <tr><td>Grounded answers</td><td>RAG over Supabase vector retrieval</td><td><span class="chip built">Built</span></td></tr>
-              <tr><td>Model contract</td><td>Model-agnostic JSON contract, so the LLM can be swapped</td><td><span class="chip built">Built</span></td></tr>
-              <tr><td>Data boundary</td><td>Automation layer kept out of any path that touches health data</td><td><span class="chip built">Built</span></td></tr>
-              <tr><td>Metrics &amp; GTM</td><td>North Star Metric, experimentation plan and go-to-market research</td><td><span class="chip designed">Documented</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <dl class="facts">
-          <div><dt>Stack</dt><dd>Lovable, Make.com, Supabase, Gemini Flash</dd></div>
-          <div><dt>Result</dt><dd>All 10 test scenarios passed; 19-page case study</dd></div>
-          <div><dt>Disclosed</dt><dd>A known colour-contrast accessibility issue, left visible rather than hidden</dd></div>
-        </dl>
+        <p class="q"><b>The decision</b>Can a post-diagnosis care-navigation companion help patients while staying on the non-device side of FDA clinical decision support guidance?</p>
+        <p>A companion that guides patients through care after a diagnosis, sold through providers. The buyer wedge is CMS's January 2024 Principal Illness Navigation reimbursement.</p>
+        <ul class="comp">
+          <li><span>Emergency gate, under 1s, model bypassed</span><span class="chip built">Built</span></li>
+          <li><span>Grounded answers via RAG on Supabase</span><span class="chip built">Built</span></li>
+          <li><span>Model-agnostic JSON contract</span><span class="chip built">Built</span></li>
+          <li><span>Metrics, experiments &amp; GTM plan</span><span class="chip designed">Documented</span></li>
+        </ul>
+        <div class="meta-row"><span>Lovable</span><span>Make.com</span><span>Supabase</span><span>Gemini Flash</span><span>10/10 tests</span><span>19-page case study</span></div>
+        <p class="note">Disclosed: a known colour-contrast accessibility issue, left visible rather than hidden.</p>
         <div class="links">
           <a href="https://northstar-navigator-guide.lovable.app" target="_blank" rel="noopener noreferrer">Live app ↗</a>
           <a href="https://github.com/manojkumarpm651-hub/northstar-navigator-guide" target="_blank" rel="noopener noreferrer">Repository ↗</a>
         </div>
       </article>
 
-      <article class="case">
-        <div class="case-head">
-          <h3>Snap-to-Stock 2.0</h3>
-          <span class="kind">B2B SaaS · Indian MSMEs · Vyapar</span>
+      <article class="build">
+        <div class="build-top">
+          <div><h3>Snap-to-Stock 2.0</h3><span class="domain">B2B SaaS · Indian MSMEs · Vyapar</span></div>
+          <span class="badge proto">● prototype</span>
         </div>
-        <blockquote class="fork">
-          <span class="label">The decision</span>
-          <p>Vyapar already ships a bill scanner. What would it take to turn a photo of a supplier bill into trusted inventory without the shop owner re-typing it?</p>
-        </blockquote>
-        <p>GST compliance costs Indian MSMEs 3.6–4.2% of turnover against a 1–2% global benchmark, and the April 2026 ITC hard-block raised the cost of a wrong entry. The redesign covers Vyapar's vendor purchase recording flow: photo, structured line items, split-screen review, commit to inventory.</p>
-        <div class="ledger-wrap">
-          <table class="ledger">
-            <thead><tr><th>Component</th><th>What it does</th><th>Status</th></tr></thead>
-            <tbody>
-              <tr><td>Snap-to-Stock</td><td>Photo to line items to review to inventory</td><td><span class="chip built">Built</span></td></tr>
-              <tr><td>Extraction engine</td><td>Gemini Flash in a single HTTP call, chosen over a five-step async document API</td><td><span class="chip built">Built</span></td></tr>
-              <tr><td>Verify layer</td><td>Deterministic math guardrail plus GST-slab and catalogue duplicate checks</td><td><span class="chip built">Built</span></td></tr>
-              <tr><td>Full GST rule check</td><td>RAG over GST rules</td><td><span class="chip designed">Designed</span></td></tr>
-              <tr><td>Proactive intelligence</td><td>Roadmap and wireframes</td><td><span class="chip designed">Designed</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p>The verify layer exists because of a live test. On a worst-case handwritten bill, the model confidently assumed 18% GST when no rate was printed. That one wrong answer is the case for checking the model's work.</p>
-        <dl class="facts">
-          <div><dt>Deliverable</dt><dd>Six PDFs: audit, PRD, responsible-AI plan, prototype, metrics &amp; GTM, panel defence</dd></div>
-          <div><dt>Stack</dt><dd>Lovable, Make.com, Gemini, Airtable; built in 3 days</dd></div>
-          <div><dt>Score</dt><dd>Capstone, 9.4 / 10</dd></div>
-        </dl>
+        <p class="q"><b>The decision</b>Vyapar already ships a bill scanner. What would it take to turn a photo of a supplier bill into trusted inventory without re-typing?</p>
+        <p>GST compliance costs MSMEs 3.6–4.2% of turnover, and the April 2026 ITC hard-block raised the cost of a wrong entry. A live test caught the model assuming 18% GST on a bill that printed no rate, which is why the verify layer exists.</p>
+        <ul class="comp">
+          <li><span>Photo → line items → review → inventory</span><span class="chip built">Built</span></li>
+          <li><span>Gemini Flash in a single HTTP call</span><span class="chip built">Built</span></li>
+          <li><span>Math guardrail + GST-slab duplicate check</span><span class="chip built">Built</span></li>
+          <li><span>Full RAG over GST rules</span><span class="chip designed">Designed</span></li>
+        </ul>
+        <div class="meta-row"><span>Lovable</span><span>Make.com</span><span>Gemini</span><span>Airtable</span><span>3-day build</span><span>6 PDFs</span></div>
         <div class="links">
           <a href="https://github.com/manojkumarpm651-hub/bill-to-stock-swift" target="_blank" rel="noopener noreferrer">Repository ↗</a>
         </div>
       </article>
     </div>
-  </section>
 
-  <!-- MEMOS -->
-  <section class="block" id="memos">
-    <div class="rail"><h2>Strategy memos</h2></div>
-    <div class="content">
-      <p class="intro">Written decision memos, each built around one open question a product leader would actually face. Figures are reproduced in Python from filings and earnings calls.</p>
-      <div class="memos">
-        <div class="memo">
-          <div>
-            <h3>Duolingo in India</h3>
-            <p class="title">Monetize the outcome, not the access</p>
-            <p>A market-entry memo on how Duolingo should earn in India. It rejects a marketplace option with the arithmetic shown, rather than leaving it out.</p>
-          </div>
-          <div class="side">
-            <span class="chip built">Complete</span>
-            <a href="https://github.com/manojkumarpm651-hub/duolingo-india-strategy-memo" target="_blank" rel="noopener noreferrer">Repository ↗</a>
-          </div>
-        </div>
-        <div class="memo">
-          <div>
-            <h3>Swiggy Instamart</h3>
-            <p class="title">A better customer, not a deeper one</p>
-            <p>A cohort-economics teardown from shareholder letters and earnings call transcripts. It catches and documents a widely circulated sign error on contribution margin (+0.2% reported, −0.2% correct). Six arithmetic checks pass.</p>
-          </div>
-          <div class="side">
-            <span class="chip built">Complete</span>
-            <a href="https://github.com/manojkumarpm651-hub" target="_blank" rel="noopener noreferrer">On GitHub ↗</a>
-          </div>
-        </div>
-        <div class="memo">
-          <div>
-            <h3>Tesla Superchargers</h3>
-            <p class="title">Pricing a dominant network that now serves competitors</p>
-            <p>A hard-tradeoff memo on Supercharger monetisation after NACS standardisation, anchored to SEC filings and Tesla's own disclosures.</p>
-          </div>
-          <div class="side">
-            <span class="chip queued">In progress</span>
-          </div>
-        </div>
-      </div>
+    <div class="sec-head later">
+      <p class="kicker">strategy memos</p>
+      <h2>Decision memos</h2>
+      <p>Each one is built around a single open question, with figures reproduced in Python from filings and earnings calls.</p>
+    </div>
+    <div class="memos">
+      <article class="memo">
+        <div class="memo-top"><p class="label">Market entry</p><span class="chip built">Complete</span></div>
+        <h3>Duolingo in India</h3>
+        <p class="sub">Monetize the outcome, not the access</p>
+        <p>How Duolingo should earn in India. It rejects a marketplace option with the arithmetic shown.</p>
+        <a href="https://github.com/manojkumarpm651-hub/duolingo-india-strategy-memo" target="_blank" rel="noopener noreferrer">Repository ↗</a>
+      </article>
+      <article class="memo">
+        <div class="memo-top"><p class="label">Growth teardown</p><span class="chip built">Complete</span></div>
+        <h3>Swiggy Instamart</h3>
+        <p class="sub">A better customer, not a deeper one</p>
+        <p>Cohort economics from shareholder letters. Catches a widely circulated contribution-margin sign error (+0.2% vs −0.2%).</p>
+        <a href="https://github.com/manojkumarpm651-hub" target="_blank" rel="noopener noreferrer">On GitHub ↗</a>
+      </article>
+      <article class="memo">
+        <div class="memo-top"><p class="label">Hard trade-off</p><span class="chip wip">In progress</span></div>
+        <h3>Tesla Superchargers</h3>
+        <p class="sub">Pricing a network that now serves rivals</p>
+        <p>Supercharger monetisation after NACS standardisation, anchored to SEC filings and Tesla's disclosures.</p>
+      </article>
     </div>
   </section>
 
   <!-- METHOD -->
-  <section class="block" id="method">
-    <div class="rail"><h2>How I work</h2></div>
-    <div class="content">
-      <div class="principles">
-        <div>
-          <h3>Define the fork first</h3>
-          <p>Every case starts with one decision that is still open. If management has already answered it in public, I retire it instead of arguing past it.</p>
-        </div>
-        <div>
-          <h3>Primary sources carry the weight</h3>
-          <p>Shareholder letters, filings and earnings calls hold up the argument. SEO-grade sources never do.</p>
-        </div>
-        <div>
-          <h3>Run the numbers</h3>
-          <p>Every derivation is reproduced in code and checked against stated figures. The scripts fail loudly if a check breaks.</p>
-        </div>
-        <div>
-          <h3>Put corrections on the record</h3>
-          <p>Errors I find, mine or the public record's, are documented in the work. Known limits are disclosed, not polished away.</p>
-        </div>
-        <div>
-          <h3>Mark built versus designed</h3>
-          <p>A prototype and a roadmap are different claims. Each build says which parts run today and which are plans.</p>
-        </div>
-        <div>
-          <h3>Ship safely in public</h3>
-          <p>Keys rotated and secrets moved to environment variables before any repo goes public. Row-level security checked on every table.</p>
-        </div>
-      </div>
+  <section class="sec" id="method">
+    <div class="sec-head">
+      <p class="kicker">how I work</p>
+      <h2>Six rules every case follows</h2>
+    </div>
+    <div class="method">
+      <div><code>01 · scope</code><h3>Define the fork first</h3><p>Every case starts with one decision that is still open. If it's been answered publicly, I retire it.</p></div>
+      <div><code>02 · evidence</code><h3>Primary sources carry the weight</h3><p>Shareholder letters, filings and earnings calls hold up the argument. SEO-grade sources never do.</p></div>
+      <div><code>03 · numbers</code><h3>Run the numbers</h3><p>Every derivation is reproduced in code, and the scripts fail loudly if a check breaks.</p></div>
+      <div><code>04 · honesty</code><h3>Corrections on the record</h3><p>Errors I find, mine or the public record's, are documented in the work.</p></div>
+      <div><code>05 · claims</code><h3>Built versus designed</h3><p>A prototype and a roadmap are different claims. Each build says which is which.</p></div>
+      <div><code>06 · safety</code><h3>Ship safely in public</h3><p>Keys rotated and secrets moved out of code before any repo goes public.</p></div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="block contact" id="contact">
-    <div class="rail"><h2>Contact</h2></div>
-    <div class="content">
-      <h2 class="big">Open to APM and AI PM roles.</h2>
-      <div class="contact-list">
-        <a href="https://www.linkedin.com/in/manoj-kumar-p-m-7a028a444" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span>manoj-kumar-p-m ↗</span></a>
-        <a href="Manoj-Kumar-PM-Resume.pdf" target="_blank" rel="noopener noreferrer"><span>Résumé</span><span>Download PDF ↗</span></a>
-        <a href="https://github.com/manojkumarpm651-hub" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span>manojkumarpm651-hub ↗</span></a>
-      </div>
+  <section class="contact" id="contact">
+    <div>
+      <p class="kicker">contact</p>
+      <h2>Let's talk about your product.</h2>
+      <p>I'm open to Associate Product Manager and AI Product Manager roles.</p>
+    </div>
+    <div class="clinks">
+      <a href="Manoj-Kumar-PM-Resume.pdf" target="_blank" rel="noopener noreferrer"><span>Résumé</span><b>Download PDF ↓</b></a>
+      <a href="https://www.linkedin.com/in/manoj-kumar-p-m-7a028a444" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><b>manoj-kumar-p-m ↗</b></a>
+      <a href="https://github.com/manojkumarpm651-hub" target="_blank" rel="noopener noreferrer"><span>GitHub</span><b>manojkumarpm651-hub ↗</b></a>
     </div>
   </section>
 
   <footer>
     <span>© 2026 Manoj Kumar P M</span>
-    <span>Bengaluru, India</span>
+    <span>Whitefield, Bengaluru</span>
   </footer>
-</div>
+</main>
 </body>
 </html>
